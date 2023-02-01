@@ -1,6 +1,14 @@
+{{!-- {{#if loggedIn && !user.is_employer}} --}}
 {{#if loggedIn}}
  <div class="review-container">
-    <h1>{{firstName}}'s Profile</h1>
+    <h1>{{user.firstName}} {{user.lastName}}'s Profile</h1>
+    <h2>this would be employee profile</h2>
     <div class="review-header">
 </div>
+{{!-- {{else}} {{#if loggedIn && user.is_employer}}
+<div>
+    <h1> {{user.firstName}} {{user.lastName}}'s profile</h1>
+    <h2>this would be employer profile</h2>
+</div> --}}
 {{/if}}
+{{!-- {{/if}} --}}

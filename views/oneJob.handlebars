@@ -1,0 +1,42 @@
+<div>
+    <div class="container">
+        <h1>{{job.title}}</h1>
+        <br>
+        <h3>Location: {{job.location}}</h3>
+        <h3>Salary: {{job.salary}}</h3>
+        <br>
+        <h3>Description:</h3>
+        <h5>{{job.body}}</h5>
+    </div>
+    <br>
+    <br>
+    <h2>Comments</h2>
+    
+    {{#if loggedIn}}
+    <div class="cards-containerj" id="add-comment">
+        <br>
+        <div class="cardj">
+            <form class="comment-form">
+                <label for=" new-comment">Add a Comment</label>
+                <textarea id="new-comment" rows="8" cols="70"></textarea>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+    {{/if}}
+
+    {{>comments job.comment}}
+   
+        {{!-- <div class="cards-containerj">
+        <div class="cardj">
+            <p>Posted by: {{user.firstName}} {{user.lastName}}</p>
+            <p>Contact: {{comment.user.email}}</p>
+            <p>{{comment.createdAt}}</p>
+            <h6>{{comment.comment}}</h6>
+        </div>
+  
+         </div> --}}
+  
+</div>
+
+<script src="./js/comment.js"></script>

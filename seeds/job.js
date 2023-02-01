@@ -1,0 +1,95 @@
+const { Job } = require('../models');
+
+const jobData = [
+    {
+        title: "job title 1",
+        body : "job description 1",
+        salary: "$1",
+        category: "category 1",
+        location: "location 1",
+        front_end: false,
+        back_end: false,
+        full_stack: true,
+        user_id: 3,
+    },
+    {
+        title: "job title 2",
+        body: "job description 2",
+        salary: "$2",
+        category: "category 2",
+        location: "location 2",
+        front_end: false,
+        back_end: true,
+        full_stack: false,
+        user_id: 3,
+    },
+    {
+        title: "job title 3",
+        body : "job description 3",
+        salary: "$3",
+        category: "category 3",
+        location: "location 3",
+        front_end: true,
+        back_end: false,
+        full_stack: false,
+        user_id: 3,
+    },
+    {
+        title: "job title 4",
+        body : "job description 4",
+        salary: "$4",
+        category: "category 4",
+        location: "location 4",
+        front_end: false,
+        back_end: false,
+        full_stack: true,
+        user_id: 5,
+    },
+    {
+        title: "job title 5",
+        body : "job description 5",
+        salary: "$5",
+        category: "category 5",
+        location: "location 5",
+        front_end: false,
+        back_end: false,
+        full_stack: true,
+        user_id: 5,
+    },
+    {
+        title: "Pizza Guy",
+        body : "job description 4",
+        salary: "$4",
+        category: "category 4",
+        location: "San Diego",
+        front_end: true,
+        back_end: false,
+        full_stack: false,
+        user_id: 3
+    },
+    {
+        title: "Pizza maker",
+        body : "job description 4",
+        salary: "$4",
+        category: "category 4",
+        location: "San Francisco",
+        front_end: false,
+        back_end: true,
+        full_stack: false,
+        user_id: 3
+    },   {
+        title: "Taco enthusiast",
+        body : "job description 4",
+        salary: "$4",
+        category: "category 4",
+        location: "San Francisco",
+        front_end: false,
+        back_end: false,
+        full_stack: true,
+        user_id: 5,
+    },
+];
+
+const seedJob = () => Job.bulkCreate(jobData);
+
+module.exports = seedJob;

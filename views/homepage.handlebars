@@ -16,6 +16,12 @@
         <form class="job-search">
             <input type="text" placeholder="Job Title" id="title" name="job-title">
             <input type="text" placeholder="Location" id="location" name="location">
+            <select  id="qualification" name="qualification">
+                <option value="Search By Position">Search By Position</option>
+                <option value="Front End">Front End</option>
+                <option value="Back End">Back End</option>
+                <option value="Full Stack">Full Stack</option>
+            </select>
             <button type="submit" class="btn">Search</button>
         </form>
     </div>
@@ -31,7 +37,7 @@
                 <a href="/job/{{job.id}}">
                 <h2>{{job.title}}</h2>
                 <p>{{job.location}}</p>
-                <p>{{job.salary_range}}</p>
+                <p>Position: {{job.qualification}}</p>
                 </a>
             </div>
         </div>

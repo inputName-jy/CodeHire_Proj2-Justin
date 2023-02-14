@@ -11,16 +11,22 @@ Job.belongsTo(User, {
 });
 
 User.hasMany(Job, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE',
 });
 
 // // Comments belong to both Jobs and Users
 
 Comment.belongsTo(Job, {
     foreignKey: 'job_id',
+    onDelete: 'CASCADE',
+
+
 });
 Job.hasMany(Comment, {
     foreignKey: 'job_id',
+    onDelete: 'CASCADE',
+
 });
 
 Comment.belongsTo(User, {
@@ -29,6 +35,7 @@ Comment.belongsTo(User, {
 
 User.hasMany(Comment, {
     foreignKey: 'user_id',
+    onDelete: 'CASCADE',
 });
 
 // Qualifications belong to both Users and Jobs through qualification tables

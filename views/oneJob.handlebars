@@ -2,41 +2,64 @@
     <div class="container">
         <h1>{{job.title}}</h1>
         <br>
-        <h3>Location: {{job.location}}</h3>
-        <h3>Salary: {{job.salary}}</h3>
+        <h4>Location: {{job.location}}</h4>
+        <h4>Position: {{job.qualification}}</h4>
+        <h4>Salary: {{job.salary}}</h4>
         <br>
-        <h3>Description:</h3>
-        <h5>{{job.body}}</h5>
+        <h4>Description:</h4>
+        <p>{{job.body}}</p>
+        <br>
+        <h5>To Apply, Contact {{job.user.firstName}} {{job.user.lastName}} at <a href="mailto:{{job.user.email}}">{{job.user.email}}</a></h5>
+        <br>
+
     </div>
     <br>
     <br>
-    <h2>Comments</h2>
+    
     
     {{#if loggedIn}}
-    <div class="cards-containerj" id="add-comment">
-        <br>
+    {{#if loggedUser.is_employer}}
+    <br>
+    {{else}}
+    <h2>Comments</h2>
+      <div class="cards-containerj">
+            {{#each job.comments}}
+        <div class="cardj">
+            <h6>Posted by: {{user.firstName}} {{user.lastName}}</h6>
+            <h6>Contact: {{user.email}}</h6>
+            <h6>{{createdAt}}</h6>
+            <p>{{content}}</p>
+        </div>
+        {{/each}}
+
+        </div>
+
+        <div class="cards-containerj">
         <div class="cardj">
             <form class="comment-form">
-                <label for=" new-comment">Add a Comment</label>
-                <textarea id="new-comment" rows="8" cols="70"></textarea>
+                <label for="content">Add a Comment</label>
+                <textarea class="class" id="content" rows="8" cols="70"></textarea>
                 <button type="submit">Add</button>
             </form>
         </div>
-    </div>
-    {{/if}}
-
-    {{>comments job.comment}}
-   
-        {{!-- <div class="cards-containerj">
-        <div class="cardj">
-            <p>Posted by: {{user.firstName}} {{user.lastName}}</p>
-            <p>Contact: {{comment.user.email}}</p>
-            <p>{{comment.createdAt}}</p>
-            <h6>{{comment.comment}}</h6>
         </div>
   
-         </div> --}}
+ 
+    {{/if}}
+    {{/if}}
+{{!-- 
+        <div class="cards-containerj">
+            {{#each job.comments}}
+        <div class="cardj">
+            <h6>Posted by: {{user.firstName}} {{user.lastName}}</h6>
+            <h6>Contact: {{user.email}}</h6>
+            <h6>{{createdAt}}</h6>
+            <p>{{content}}</p>
+        </div>
+        {{/each}} --}}
+  
+         </div>
   
 </div>
 
-<script src="./js/comment.js"></script>
+<script src="/js/comment.js"></script>

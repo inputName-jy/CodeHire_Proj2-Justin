@@ -23,25 +23,29 @@ Job.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        category: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+        // category: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        // },
         location: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        front_end: {
-            type: DataTypes.TEXT,
-            allowNull: true,
-        },
-        back_end: {
-            type: DataTypes.TEXT,
-            allowNull: true,
-        },
-        full_stack: {
-            type: DataTypes.TEXT,
-            allowNull: true,
+        // front_end: {
+        //     type: DataTypes.TEXT,
+        //     allowNull: true,
+        // },
+        // back_end: {
+        //     type: DataTypes.TEXT,
+        //     allowNull: true,
+        // },
+        // full_stack: {
+        //     type: DataTypes.TEXT,
+        //     allowNull: true,
+        // },
+        qualification: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         user_id: {
             type: DataTypes.INTEGER,

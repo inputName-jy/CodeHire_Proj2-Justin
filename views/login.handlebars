@@ -3,22 +3,25 @@
       <a href="/"><li>Home</li></a>
     </ul>
    </nav> --}}
-   <p>This is login.handlebars</p>
- <div class="cards">
-    <div class="card">
+ <div class="cards-containerj login-form">
+    <div class="cardj">
       <h2>Login</h2>
       <form class="login-form">
-        <label for="email-login">Email</label>
+        <label for="email-login">Email:</label>
         <input type="text" id="email-login">
-        <label for="password-login">Password</label>
+        <br>
+        <label for="password-login">Password:</label>
         <input type="password" id="password-login">
         {{!-- <input type="submit" value="Submit"> --}}
-        <button type="submit">Login</button>
+        <br>
+        <button class="login" type="submit">Login</button>
       </form>
     </div>
   
-    <div class="card">
-      <a href="/signup"><h2> Or Create Account</h2></a>
+    <div class="cards-containerj">
+      <div class="signup">
+        <a href="/signup"><h2> Or Create Account</h2></a>
+      </div>
       {{!-- <form class="signup-form"> --}}
         {{!-- Do we want username here? Maybe this should just be on profile page. --}}
         {{!-- <label for="create-name">Name</label>

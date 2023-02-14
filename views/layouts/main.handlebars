@@ -17,15 +17,19 @@
       <a class="menu-text" href="/">CodeHire</a>
     </ul>
   </div>
-  <nav class="top-bar-right">
+  <div class="log-in-out">
 
     {{#if loggedIn}}
-    <button id="logout">Logout</button>
+    <button class="log" id="logout">Logout</button>
     {{else}}
-    <a href="/login">Login</a>
+    <a href="/login">
+      <button class="log" id="login">
+        Login
+      </button>
+    </a>
     {{/if}}
 
-  </nav>
+  </div>
 </div>
 <nav>
   <ul>

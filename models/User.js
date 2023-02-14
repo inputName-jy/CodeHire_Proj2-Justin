@@ -57,18 +57,22 @@ User.init(
             type: DataTypes.TEXT,
             allowNull: true,
         },
-        front_end: {
-            type: DataTypes.TEXT,
-            allowNull: true,
+        skills: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
-        back_end: {
-            type: DataTypes.TEXT,
-            allowNull: true,
-        },
-        full_stack: {
-            type: DataTypes.TEXT,
-            allowNull: true,
-        },
+        // front_end: {
+        //     type: DataTypes.TEXT,
+        //     allowNull: true,
+        // },
+        // back_end: {
+        //     type: DataTypes.TEXT,
+        //     allowNull: true,
+        // },
+        // full_stack: {
+        //     type: DataTypes.TEXT,
+        //     allowNull: true,
+        // },
         is_employer: {
             type: DataTypes.BOOLEAN,
         }
